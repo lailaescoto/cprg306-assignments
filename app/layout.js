@@ -12,7 +12,7 @@ import "./globals.css";
 // });
 
 export const metadata = {
-  title: "Web Dev 2",
+  title: "Shopping List",
   description: "Assignment 2",
 };
 
