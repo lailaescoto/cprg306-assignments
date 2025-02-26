@@ -9,9 +9,8 @@ export default function NewItem() {
     const [category, setCategory] = useState("Produce");
 
     const increment = () => {
-        if (quantity < 20) {
             setQuantity(quantity + 1);
-        }
+        
     };
 
     const decrement = () => {
@@ -42,7 +41,7 @@ export default function NewItem() {
         <div className="flex justify-center items-center max-w-sm bg-white mx-auto space-x-4 p-4 rounded-lg">
             <div className="text-black text-lg font-semibold mx-auto">{quantity}</div>
             <button onClick={(event) => { event.preventDefault(); decrement(); }} disabled={quantity === 1} className="bg-blue-500 hover:bg-blue-700 disabled:bg-gray-400 text-white font-bold py-2 px-4 rounded"> - </button>
-            <button onClick={(event) => { event.preventDefault(); increment(); }} disabled={quantity === 20} className="bg-blue-500 hover:bg-blue-700 disabled:bg-gray-400 text-white font-bold py-2 px-4 rounded"> + </button>
+            <button onClick={(event) => { event.preventDefault(); increment(); }} className="bg-blue-500 hover:bg-blue-700 disabled:bg-gray-400 text-white font-bold py-2 px-4 rounded"> + </button>
         </div>
         
         <label htmlFor="category" className="text-lg font-bold mx-auto">Category </label>
