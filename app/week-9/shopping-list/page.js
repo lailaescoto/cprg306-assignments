@@ -5,8 +5,21 @@ import ItemList from "./item-list";
 import NewItem from "./new-item";
 import itemsData from "./items.json";
 import MealIdeas from "./meal-ideas";
+import { useUserAuth } from "../_utils/auth-context";
 
 export default function Page() {
+
+    const { user } = useUserAuth();
+
+    if (!user) {
+      return (
+        <div>
+          <h1>Week 9</h1>
+          <p>Go Away!</p>
+        </div>
+      );
+    }
+
     const [items, setItems] = useState(itemsData);
     const [selectedItemName, setSelectedItemName] = useState("");
 
